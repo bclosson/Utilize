@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# API codes
+#EdamamAPI
+# RecipesAPI
+app_id 2b29af96
+app_key 920905558c629c1968438754a353049d
+# IngredientsAPI
+app_id bf66a1bc
+app_key beb4173c551e06d5bb75430f7efc3deb
