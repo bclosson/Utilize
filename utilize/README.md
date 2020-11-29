@@ -14,9 +14,25 @@ UTILIZE! is a app designed to help you come up with great meal ideas based on in
 
 ## WIREFRAMES/ERD
 [Wireframe&ERD](https://drive.google.com/drive/folders/1pO9uYrIy-cYAGX7jRPPL2V7pbBsOnU-g?usp=sharing)
+
 ## MILESTONES
-
+- Sprint One:
+    * Access API to verify query's will work with app
+    * Build Wireframes and ERD
+    * Complete README
+    * Set up BackEnd and Data Base
+- Sprint Two:
+    * Create React App front end, all pages with routes.
+    * Authorization to create user
+    * Connect Front end to Back-end database
+    * Connect API to app
+- Sprint Three: 
+    * Connect user inputs to API queries to return recipes to index page
+    * Connect recipes on index page to show page
+    * Create functionality to save desired recipes to profile database
+    * Style All pages with Materialize CSS
+    
 ## TECHNOLOGIES USED
-
+- MongoDB, Express, ReactJS, NodeJS, MaterializeCSS, CSS, EdamamAPI
 ## FUTURE DEVELOPMENT/UNSOLVED PROBLEMS
 
