@@ -17,5 +17,7 @@ mongoose.connection.on('error', (err) => {
 
 
 module.exports = {
-  Recipe: require('./Recipe')
+  Recipe: require('./Recipe'),
+  Ingredient: require('./Ingredients'),
+  User: require('./User')
 };

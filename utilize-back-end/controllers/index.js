@@ -1,3 +1,4 @@
 module.exports = {
-  recipes: require('recipesController')
+  recipes: require('recipesController'),
+  ingredients: require('ingredientsController'),
 }
