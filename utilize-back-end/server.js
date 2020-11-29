@@ -1,6 +1,7 @@
 // IMPORTS
 const express = require('express');
 const cors = require('cors');
+const routes = require('./routes');
 
 const port = process.env.PORT || 4000;
 const app = express();
@@ -10,10 +11,11 @@ const corsOptions = {
 }
 
 // MIDDLEWARE - JSON PARSING
-
+app.use(express.json());
+app.use(cors(corsOptions));
 
 // MIDDLEWARE - API ROUTES
-
+app.use("https://api.edamam.com/search", routes.recipes)
 
 // CONNECTION 
 
