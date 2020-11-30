@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+const db = require('../config/keys').mongoURI;
 
-const connectionString = 
-  process.env.MONGODB_URI || "mongodb://localhost:27017/Utilize";
+
 const configOptions = {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -10,7 +10,7 @@ const configOptions = {
 };
 
 mongoose
-  .connect(connectionString, configOptions)
+  .connect(db, configOptions)
   .then(() => console.log("MongoDB successfully connected..."))
   .catch((err) => console.log(`MongoDB connection error: ${err}`));
 
