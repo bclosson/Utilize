@@ -1,4 +1,3 @@
-const { truncate } = require('fs');
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
@@ -8,7 +7,7 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: false
+    required: true
   },
   password: {
     type: String,
@@ -20,7 +19,7 @@ const userSchema = new mongoose.Schema({
   }]
 }, {timestamps: true});
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('users', userSchema);
 
 module.exports = User;
 
