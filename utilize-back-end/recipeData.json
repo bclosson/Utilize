@@ -1,0 +1,59 @@
+{
+"recipes": [
+    {
+    "name": "Green Bean Salad with Seared Ham",
+    "image": "https://www.edamam.com/web-img/088/0882521ea4bc01ac96944fee19ff5856.jpg",
+    "yield": 6,
+    "calories": 1244,
+    "ingredients": [
+    "1 pound haricots verts or young green beans",
+    "4 ounces thickly sliced cured ham, such as Bayonne ham or prosciutto, cut into thin strips",
+    "2 tablespoons sherry vinegar",
+    "1/8 teaspoon kosher salt",
+    "1/8 teaspoon freshly ground white pepper",
+    "3 tablespoons extra-virgin olive oil",
+    "2 tablespoons snipped chives",
+    "1 tablespoon finely chopped shallot",
+    "1 tablespoon small basil leaves",
+    "1 cup firm sheep's-milk cheese shavings, such as P'tit Basque, or Gruyère cheese (about 2 1/2 ounces)"
+    ]
+    },
+    {
+    "name": "White Bean and Ham Stew",
+    "image": "https://www.edamam.com/web-img/2cd/2cdc3c41b9f3f88c0804e9bbd6dc72c9.jpg",
+    "yield": 16,
+    "calories": 4374,
+    "ingredients": [
+    "4 meaty smoked ham hocks (about 3 1/2 pounds)",
+    "1/2 pound(s) dried cannellini or borlotti beans (1 1/4 cups), picked over and rinsed",
+    "3 quart(s) water",
+    "2 medium red-skinned potatoes, peeled and cut into 1-inch pieces",
+    "1 large leek, white and pale green parts only, cut into 1-inch pieces",
+    "1 large celery rib, cut into 1/2-inch pieces",
+    "1 large carrot, cut into 1/2-inch pieces",
+    "1 large parsnip, cut into 1/2-inch pieces",
+    "1/2 pound(s) Savoy cabbage, cut into 2-inch pieces",
+    "Salt and freshly ground black pepper",
+    "Eight 1/4-inch-thick slice(s) of peasant bread, lightly toasted",
+    "2 cup(s) shredded Gruyère or Comté cheese"
+    ]  
+    },
+    {
+    "name": "French-Style Stuffed Portobellos with Green Beans",
+    "image": "https://www.edamam.com/web-img/250/25079d3b52a88c0c5fdfb103aecf7a47.jpg",
+    "yield": 3,
+    "calories": 851,
+    "ingredients": [
+    "2 tablespoons butter, divided",
+    "1 tablespoon vegetable oil",
+    "1 small shallot, minced",
+    "2 cloves garlic, minced",
+    "3 portobello mushroom caps",
+    "1/2 pound haricots verts (French green beans), trimmed",
+    "1/4 cup Sauvignon blanc",
+    "3 slices Paris ham, or more to taste",
+    "1/2 cup shredded Gruyère cheese"
+    ]  
+    }
+]
+}

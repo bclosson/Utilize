@@ -15,8 +15,7 @@ app.use(express.json());
 app.use(cors(corsOptions));
 
 // MIDDLEWARE - API ROUTES
-app.use("https://api.edamam.com/search", routes.recipes)
+app.use('/api/v1/recipes', routes.recipes);
 
-// CONNECTION 
-
-app.listen(port, () => console.log(`server is running on port ${port}`));
+// CONNECTION
+app.listen(port, () => console.log(`Server is running on port ${port}`));

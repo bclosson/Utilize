@@ -6,13 +6,10 @@ const recipeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  photo: Image,
+  image: String,
   yield: Number,
   calories: Number,
-  ingredients: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Ingredients'
-  }],
+  ingredients: Array,
   
 }, {timestamps: true});
 
