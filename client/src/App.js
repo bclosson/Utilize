@@ -7,7 +7,6 @@ function App() {
     <div className="App">
      <Navbar />
      { routes }
-     <h1>Utilize!</h1>
     </div>
   );
 }

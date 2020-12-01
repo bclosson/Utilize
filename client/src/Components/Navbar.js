@@ -5,7 +5,7 @@ function Navbar(props) {
   return(
     <nav>
       <div className="nav-wrapper">
-        <Link href="#" className="brand-logo">UTILIZE!</Link>
+        <Link to="/" className="brand-logo">UTILIZE!</Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/recipes">Recipe Library</Link></li>
