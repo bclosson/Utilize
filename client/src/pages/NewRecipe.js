@@ -1,5 +1,7 @@
 import React from 'react';
 import RecipeModel from '../models/recipe';
+import RecipeCard from '../Components/RecipeCard';
+
 
 class NewRecipe extends React.Component {
   state= {
@@ -13,7 +15,7 @@ class NewRecipe extends React.Component {
   render() {
     return (
       <div>
-        <h1>New Recipes Will Be Sent From Here!</h1>
+        <RecipeCard />
       </div>
     )
   };
