@@ -1,14 +1,26 @@
 import React from 'react';
-import RecipeCard from '../Components/RecipeCard';
+import { Link } from 'react-router-dom';
 
 
 class NewRecipe extends React.Component {
-  state= {
-    image: '',
-    yield: '',
-    calories: '',
-    ingredients: [], 
-    completed: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      ingredients: '',
+    };
+  }
+
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+  };
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name] : event.target.value
+    });
+    // console.log(this.state);
+    console.log("this is NewRecipe state:", this.state);
   };
 
   render() {
@@ -19,44 +31,24 @@ class NewRecipe extends React.Component {
             <form className="col s12">
               <div className="row">
                 <div className="input-field col s6">
-                  <input placeholder="Placeholder" id="produce" type="text" className="validate" />
-                  <label for="produce">Produce</label>
-                </div>
-                <div className="input-field col s6">
-                  <input id="meat" type="text" className="validate" />
-                  <label for="meat">Meat</label>
-                </div>
-              </div>
-              <div className="row">
-                <div className="input-field col s6">
-                  <input id="seafood" type="text" className="validate" />
-                  <label for="seafood">Seafood</label>
+                  <input                   
+                    name="ingredients"
+                    type="text"
+                    className="input-field"
+                    placeholder='Ingredients' 
+                    onChange={ this.handleChange } 
+                  />
+                  <label for="ingredients">Ingredients</label>
                 </div>
               </div>
-              <div className="row">
-                <div className="input-field col s6">
-                  <input id="dairy" type="text" className="validate" />
-                  <label for="dairy">Dairy</label>
-                </div>
-              </div>
-              <div className="row">
-                <div className="input-field col s6">
-                  <input id="spices" type="text" className="validate" />
-                  <label for="spices">Spices</label>
-                </div>
-              </div>
-              <div className="row">
-                <div className="input-field col s6">      
-                    <input id="email_inline" type="email" className="validate" />
-                    <label for="email_inline">Email</label>
-                    <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                </div>
-              </div>
+              <Link className = 'btn button-blue spacing' to={{
+                pathname: '/recipes',
+                ingredients: {
+                  q: this.state.ingredients
+                }
+              }}>Submit Ingredients</Link>
             </form>
           </div>
-        </div>
-        <div className="card">
-          <RecipeCard />
         </div>
       </div>
     )

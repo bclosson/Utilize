@@ -1,6 +1,8 @@
 import React from 'react';
 import RecCards from '../Components/RecCards';
 import { Link } from 'react-router-dom';
+import RecipeShow from './RecipeShow';
+
 
 class RecipeList extends React.Component {
   constructor(props) {
@@ -10,13 +12,15 @@ class RecipeList extends React.Component {
       recipes: {},
       loading: true,
     }
+    console.log('this is RecipeList props:', props);
   }
   //Call API 
   componentDidMount(){
     let app_id = '2b29af96';
     let app_key = 'ad6c9bcb4fd957fb868715bd11fe277a';
-
-    fetch(`https://api.edamam.com/search?app_id=${ app_id }&app_key=${ app_key }&q=Chicken`)
+    let ingredients = this.props.location.ingredients.q;
+    console.log('these are ingredients:', ingredients);
+    fetch(`https://api.edamam.com/search?app_id=${ app_id }&app_key=${ app_key }&q=${ ingredients }`)
       .then((buffer) => {
         if (buffer.ok) {
           return buffer.json(buffer)

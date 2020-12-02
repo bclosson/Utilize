@@ -5,22 +5,24 @@ import { Link } from 'react-router-dom';
 const RecipeCard = (props) => {
   console.log('recipe card props:', props);
   let recipe = props.recipe.recipe;
+  
+  
   return(
     <div className="row">
       <div className="col s6 m7">
         <div className="card">
           <div className="card-image">
-            <img src={recipe.image} alt="Recipe Image"/>
+            <img src={recipe.image} alt="Recipe"/>
             <span className="card-title">{ recipe.label }</span>
           </div>
           <div className="card-content">
-            <h1></h1>
+            {/* <h1></h1> */}
             <p>Servings: { recipe.yield }</p>
             <p>Calories Per Serving: { Math.floor(recipe.calories / recipe.yield) }</p>
             
           </div>
           <div className="card-action">
-            <Link to='/recipes/:id'>Click For Full Recipe</Link>
+            <Link to='/recipes/:recKey'>Click For Full Recipe</Link>
           </div>
         </div>
       </div>

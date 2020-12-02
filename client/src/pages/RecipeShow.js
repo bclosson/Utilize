@@ -2,17 +2,15 @@ import React from 'react';
 import RecipeModel from '../models/recipe';
 import RecipeCard from '../Components/RecipeCard';
 
-class RecipeShow extends React.Component {
-  state = {
-    recipe: {},
-    recipeId: '',
-  };
+const RecipeShow = (props) => {
 
-  render () {
+  console.log('This is Show Props:', props)
+  // let id = props.recipes.recKey;
+  // console.log('this is show recKey:', id);
     return(
       <div className="profile-container">
         <div className="card" id="recipe-image">
-          <img src="#" alt="Recipe Image"/>
+          <img src='' alt="Recipe Image"/>
         </div>
         <br/>
         <aside>
@@ -36,7 +34,6 @@ class RecipeShow extends React.Component {
         </div>
       </div>
     )
-  };
 };
 
 export default RecipeShow;

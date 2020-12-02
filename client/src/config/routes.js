@@ -14,7 +14,7 @@ export default (
     <Route path='/register' component={ Register } />
     <Route path='/login' component={ Login } />
     <Route path='/recipes/new' component={ NewRecipe } />
-    <Route path='/recipes/:id' component={ RecipeShow } />
+    <Route path='/recipes/:recKey' component={ RecipeShow } />
     <Route path='/recipes' component={ RecipeList } />
   </Switch>
 )
