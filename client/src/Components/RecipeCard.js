@@ -15,12 +15,12 @@ const RecipeCard = (props) => {
           </div>
           <div className="card-content">
             <h1></h1>
-            <p>Servings: { recipe.servings }</p>
-            <p>Calories: { recipe.calories }</p>
+            <p>Servings: { recipe.yield }</p>
+            <p>Calories Per Serving: { Math.floor(recipe.calories / recipe.yield) }</p>
             
           </div>
           <div className="card-action">
-            <Link to="/recipes/${props.id">This is a link</Link>
+            <Link to='/recipes/:id'>Click For Full Recipe</Link>
           </div>
         </div>
       </div>

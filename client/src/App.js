@@ -9,6 +9,7 @@ import Dashboard from './Components/dashboard/Dashboard';
 import setAuthToken from './utils/setAuthToken';
 import jwt_decode from "jwt-decode";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
+import Footer from './Components/Footer';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -43,6 +44,7 @@ class App extends React.Component {
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
         </Switch>
       </div>
+      <Footer />
     </Provider>
   );
   }
