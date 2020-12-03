@@ -51,17 +51,12 @@ class RecipeList extends React.Component {
     } else {
 
     const dishes = this.state.recipes.hits.map((dish) => {
-    //   let image = dish.recipe.image;
-    //   let name = dish.recipe.label;
-    //   let servings = dish.recipe.yield;
-    //   let calories = dish.recipe.calories / servings;
+
       return dish;
-    //   console.log('this is dish:', dish);
-    //    <RecipeCard key={dish.id} name={name} image={image} servings={servings} calories={calories} />
+
      }) 
-      console.log('these are dishes:', dishes);
-      
-      // console.log('direct path:', this.state.recipes.hits[0].recipe.calories);
+      // console.log('these are dishes:', dishes);
+    
       return (
         <div>
           <h1>Utilize! Recipes</h1>

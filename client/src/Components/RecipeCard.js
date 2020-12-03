@@ -22,7 +22,25 @@ const RecipeCard = (props) => {
             
           </div>
           <div className="card-action">
-            <Link to='/recipes/:recKey'>Click For Full Recipe</Link>
+            <Link to={{
+              pathname:'/recipes/show',
+              recipes: {
+                recKey: props.recKey,
+                name: props.recipe.recipe.label,
+                image: props.recipe.recipe.image,
+                ingredients: props.recipe.recipe.ingredientLines,
+                servings: props.recipe.recipe.yield,
+                calories: props.recipe.recipe.calories,
+                carbs: props.recipe.recipe.totalNutrients.CHOCDF.quantity,
+                fat: props.recipe.recipe.totalNutrients.FAT.quantity,
+                cholesterol: props.recipe.recipe.totalNutrients.CHOLE.quantity,
+                fiber: props.recipe.recipe.totalNutrients.FIBTG.quantity,
+                sodium: props.recipe.recipe.totalNutrients.NA.quantity,
+                protein: props.recipe.recipe.totalNutrients.PROCNT.quantity,
+                sugar: props.recipe.recipe.totalNutrients.SUGAR.quantity,
+                url: props.recipe.recipe.url
+              }
+            }}>Click For Full Recipe</Link>
           </div>
         </div>
       </div>

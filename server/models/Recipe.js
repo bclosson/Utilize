@@ -7,9 +7,11 @@ const recipeSchema = new mongoose.Schema({
     required: true,
   },
   image: String,
-  yield: Number,
-  calories: Number,
+  recipeLink: String,
   ingredients: Array,
+  servings: Number,
+  nutritionalInformation: String,
+  comments: String
   
 }, {timestamps: true});
 
