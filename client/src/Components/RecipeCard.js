@@ -16,7 +16,6 @@ const RecipeCard = (props) => {
             <span className="card-title">{ recipe.label }</span>
           </div>
           <div className="card-content">
-            {/* <h1></h1> */}
             <p>Servings: { recipe.yield }</p>
             <p>Calories Per Serving: { Math.floor(recipe.calories / recipe.yield) }</p>
             

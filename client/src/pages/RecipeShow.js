@@ -1,7 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RecipeModel from '../models/recipe';
+
 
 const RecipeShow = (props) => {
+
+  // submit recipe to database
+
+  const onSubmit = (event) => {
+    let show = props.location.recipes;
+    let savedRecipe = {
+      name: show.name,
+      image: show.image,
+      recipeLink: show.url,
+      servings: show.servings,
+      calories: show.calories,
+    }
+
+    RecipeModel.create(savedRecipe)
+      .then((data) => {
+        //redirect after new recipe is submitted to database
+        props.history.push('/recipes/new');
+      })
+  }
 
   console.log('This is Show Props:', props)
   // let id = props.recipes.recKey;
@@ -43,7 +64,7 @@ const RecipeShow = (props) => {
             <h6>Comments:</h6>
           </article>
           <button class="btn waves-effect waves-light" id="recipe-submit" 
-            type="submit" name="action">Save Recipe
+            type="submit" name="action" onClick={onSubmit}>Save Recipe
             <i class="material-icons right">send</i>
           </button>
         </div>

@@ -1,4 +1,8 @@
 const db = require('../models');
+// const url = ''
+
+// Load Recipe Model
+const Recipe = require('../models/Recipe')
 
 const index = (req, res) => {
   db.Recipe.find({})
@@ -23,6 +27,7 @@ const show = (req, res) => {
 };
 
 const create = (req, res) => {
+  console.log('this is Create:', req.body);
   db.Recipe.create(req.body)
   .then((savedRecipe) => {
     res.json({ recipe: savedRecipe });

@@ -7,6 +7,7 @@ import RecipeList from '../pages/RecipeList';
 import NewRecipe from '../pages/NewRecipe';
 import RecipeShow from '../pages/RecipeShow';
 import UserRecipes from '../pages/UserRecipes';
+import LibraryShow from '../pages/LibraryShow';
 
 
 export default (
@@ -16,7 +17,8 @@ export default (
     <Route path='/login' component={ Login } />
     <Route path='/recipes/new' component={ NewRecipe } />
     <Route path='/recipes/show' component={ RecipeShow } />
-    <Route path='/recipes' component={ RecipeList } />
+    <Route path='/recipes/library/:id' component={ LibraryShow } />
     <Route path='/recipes/library' component={ UserRecipes } />
+    <Route path='/recipes' component={ RecipeList } />
   </Switch>
 )

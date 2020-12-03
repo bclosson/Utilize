@@ -8,7 +8,7 @@ function Navbar(props) {
         <Link to="/" className="brand-logo">UTILIZE!</Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/recipes">Recipe Library</Link></li>
+          <li><Link to="/recipes/library">Recipe Library</Link></li>
           <li><Link to="/recipes/new">Find Recipes</Link></li>
         </ul>
       </div>

@@ -10,7 +10,7 @@ const recipeSchema = new mongoose.Schema({
   recipeLink: String,
   ingredients: Array,
   servings: Number,
-  nutritionalInformation: String,
+  calories: String,
   comments: String
   
 }, {timestamps: true});

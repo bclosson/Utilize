@@ -14,7 +14,6 @@ const RecCards = (props) => {
   return(
     <>
       { recipeArray }
-      {/* <RecipeShow recipes={recipeArray} /> */}
     </>
   )
 }
