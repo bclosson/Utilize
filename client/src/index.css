@@ -49,11 +49,133 @@ nav ul a {
   background-color: #d68535 !important;
 }
 
+/* LOGIN PAGE */
+h4 {
+  color: #fbd966;
+}
+
+a {
+  color: #ff6f00;
+}
+
+button {
+  background-color: #fbd966;
+}
+
+/* NEW RECIPE PAGE */
+.btn {
+  color: black;
+  background-color: #fbd966;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+input {
+  color: #fbd966;
+}
+/* RECIPE INDEX PAGE */
+h1 {
+  color: #ff6f00;
+}
+
+#recipe-header {
+  color: #ff6f00;
+}
+
+.card .card-content {
+  background-color: #d68535;
+}
+
+.card .card-action {
+  background-color: #d68535;
+}
+
+/* RECIPE SHOW PAGE */
+h3 {
+  color: #fbd966;
+}
+#ingredients.card {
+  background-color: #fcf1c6;
+  margin: 20px;
+}
+
+.card {
+  background-color: #283618;
+}
+
+#rec-image {
+  border-radius: 10px;
+  width: 100%;
+}
+
+#recipe-image {
+  background-color: #fbd966;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px;
+  width: 35%;
+}
+
+
+article.nutri-info {
+  background-color: #fcf1c6;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 20px 0 20px;
+}
+
+#ingredients.card {
+  background-color: #fcf1c6;
+  border-radius: 10px;
+}
+
+#show-ingredients.card {
+  background-color: #fcf1c6;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+}
+
+#ingredients-container {
+  background-color: #fcf1c6;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px 20px 0px 20px;
+}
+
+#lib-img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+#recipe {
+  background-color: #fcf1c6;
+  justify-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  width: 30%;
+}
+
+a {
+  margin: 0 0 0 20px;
+}
+
+h6 {
+  color: #ff6f00;
+  margin: 0 0 0 20px;
+}
+
+#recipe-update {
+  margin: 2px;
+}
+
+#recipe-delete {
+  margin: 2px;
+}
 
 /* FOOTER */
 .page-footer {

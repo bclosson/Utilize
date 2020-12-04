@@ -39,7 +39,7 @@ const RecipeShow = (props) => {
       <div className="profile-container">
         <h3>{show.name}</h3>
         <div className="card" id="recipe-image">
-          <img src={show.image} alt="Recipe Image"/>
+          <img id="rec-image" src={show.image} alt="Recipe Image"/>
         </div>
         <br/>
         <a href={show.url}>{show.name}</a>
@@ -54,15 +54,17 @@ const RecipeShow = (props) => {
         <br />
         <div className="card" id="nutri-container">
           <article className="nutri-info">
-            <h6>Nutritional Information (per serving):</h6><br/>
-            <h6>Servings: {show.servings}</h6>
-            <p>Calories Per Serving: {Math.floor(show.calories / show.servings)}</p>
-            <p>Carbohydrates: {Math.floor(show.carbs / show.servings)}g</p>
-            <p>Fat: {Math.floor(show.fat / show.servings)}g</p>
-            <p>Cholesterol: {Math.floor(show.cholesterol / show.servings)}mg</p>
-            <p>Fiber: {Math.floor(show.fiber / show.servings)}g</p>
-            <p>Protein: {Math.floor(show.protein / show.servings)}g</p>
-            <p>Sugars: {Math.floor(show.sugar / show.servings)}g</p>
+            
+              <h6>Nutritional Information (per serving):</h6><br/>
+              <h6>Servings: {show.servings}</h6>
+              <p>Calories Per Serving: {Math.floor(show.calories / show.servings)}</p>
+              <p>Carbohydrates: {Math.floor(show.carbs / show.servings)}g</p>
+              <p>Fat: {Math.floor(show.fat / show.servings)}g</p>
+              <p>Cholesterol: {Math.floor(show.cholesterol / show.servings)}mg</p>
+              <p>Fiber: {Math.floor(show.fiber / show.servings)}g</p>
+              <p>Protein: {Math.floor(show.protein / show.servings)}g</p>
+              <p>Sugars: {Math.floor(show.sugar / show.servings)}g</p>
+            
           </article>
         </div>
         <br/>

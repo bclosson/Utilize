@@ -38,7 +38,7 @@ class NewRecipe extends React.Component {
                     placeholder='Ingredients' 
                     onChange={ this.handleChange } 
                   />
-                  <label for="ingredients">Ingredients</label>
+                  <label for="ingredients"></label>
                 </div>
               </div>
               <Link className = 'btn button-blue spacing' to={{
