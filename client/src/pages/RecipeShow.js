@@ -42,7 +42,7 @@ const RecipeShow = (props) => {
           <img src={show.image} alt="Recipe Image"/>
         </div>
         <br/>
-        Recipe Link:<Link> Website:{show.url}</Link>
+        <a href={show.url}>{show.name}</a>
         <aside>
           <div className="card" id="ingredients">
             <article className="card" id="show-ingredients">
@@ -54,15 +54,15 @@ const RecipeShow = (props) => {
         <br />
         <div className="card" id="nutri-container">
           <article className="nutri-info">
-            <h6>Nutritional Information:</h6><br/>
-            <p>Servings:{show.servings}</p>
-            <p>Calories:{show.calories}</p>
-            <p>Carbohydrates:{show.carbs}g</p>
-            <p>Fat:{show.fat}g</p>
-            <p>Cholesterol:{show.cholesterol}mg</p>
-            <p>Fiber:{show.fiber}g</p>
-            <p>Protein:{show.protein}g</p>
-            <p>Sugars:{show.sugar}g</p>
+            <h6>Nutritional Information (per serving):</h6><br/>
+            <h6>Servings: {show.servings}</h6>
+            <p>Calories Per Serving: {Math.floor(show.calories / show.servings)}</p>
+            <p>Carbohydrates: {Math.floor(show.carbs / show.servings)}g</p>
+            <p>Fat: {Math.floor(show.fat / show.servings)}g</p>
+            <p>Cholesterol: {Math.floor(show.cholesterol / show.servings)}mg</p>
+            <p>Fiber: {Math.floor(show.fiber / show.servings)}g</p>
+            <p>Protein: {Math.floor(show.protein / show.servings)}g</p>
+            <p>Sugars: {Math.floor(show.sugar / show.servings)}g</p>
           </article>
         </div>
         <br/>
