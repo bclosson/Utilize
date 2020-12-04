@@ -8,13 +8,59 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #283618;
 }
 
 main {
   flex: 1 0 auto;
 }
 
+/* NAVBAR */
+.nav-wrapper {
+  background-color: #bc6d2d;
+}
+
+nav .brand-logo {
+  color: black;
+}
+
+nav ul a {
+  color: black;
+  background-color: #fbd966;
+  align-items: center;
+  margin: 2px;
+  border-radius: 5px;
+  height: 58px;
+
+}
+
+/* TEXT LOGIN/REGISTER */
+.grey-text.text-darken-1 {
+  color: #fbd966 !important
+}
+
+/* LOGIN/REGISTER BUTTONS */
+/* Register */
+.blue.accent-3 {
+  background-color: #d68535 !important;
+}
+/* Login */
+.white {
+  background-color: #d68535 !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* FOOTER */
+.page-footer {
+  background-color: #bc6d2d;
+}
+
+.page-footer .footer-copyright{
+  color: #fbd966;
+  text-align: right;
 }
