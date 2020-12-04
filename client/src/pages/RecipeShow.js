@@ -13,8 +13,15 @@ const RecipeShow = (props) => {
       name: show.name,
       image: show.image,
       recipeLink: show.url,
+      ingredients: show.ingredients,
       servings: show.servings,
       calories: show.calories,
+      carbohydrates: show.carbs,
+      fat: show.fat,
+      cholesterol: show.cholesterol,
+      fiber: show.fiber,
+      protein: show.protein,
+      sugars: show.sugar,
     }
 
     RecipeModel.create(savedRecipe)

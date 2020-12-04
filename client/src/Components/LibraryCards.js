@@ -13,12 +13,12 @@ const LibraryCards = (props) => {
           <span className="card-title">{ props.recipe.name }</span>
         </div>
         <div className="card-content">
-          <p>Servings: { props.recipe.yield }</p>
-          <p>Calories Per Serving: { Math.floor(props.recipe.calories / props.recipe.yield) }</p>
+          <p>Servings: { props.recipe.servings }</p>
+          <p>Calories Per Serving: { Math.floor(props.recipe.calories / props.recipe.servings) }</p>
           
         </div>
         <div className="card-action">
-          <Link to={`/library/${props.recipe.id}`}>
+          <Link to={`/recipes/library/${props.recipe._id}`}>
             Click For Full Recipe
           </Link>
         </div>
