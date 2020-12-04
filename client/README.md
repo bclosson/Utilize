@@ -7,8 +7,8 @@ UTILIZE! is a app designed to help you come up with great meal ideas based on in
 ## USER STORIES
 - The user will create a profile with username, email, and password.
 - The user will be directed to their profile page where they can start to use the app.
-- The user at this point can submit a list of ingredients to use, returning up to 12 recommended recipes based on their ingredients.
-- The user can "click" on any of the recipe cards to view the total recipe and procedure.
+- The user at this point can submit a list of ingredients to use, returning up to 10 recommended recipes based on their ingredients.
+- The user can "click" on any of the recipe cards to view the total recipe and link to the origination website.
 - The user can choose to save any recipe they enjoyed makeing in their profile library
 - The user has the option to edit(add notes or change ingredients) or delete each recipe card.
 
@@ -20,10 +20,10 @@ UTILIZE! is a app designed to help you come up with great meal ideas based on in
     * Access API to verify query's will work with app
     * Build Wireframes and ERD
     * Complete README
-    * Set up BackEnd and Data Base
+    * Set up BackEnd, Database
+    * Set up Authorization
 - Sprint Two:
-    * Create React App front end, all pages with routes.
-    * Authorization to create user
+    * Create React App front end, all pages with routes
     * Connect Front end to Back-end database
     * Connect API to app
 - Sprint Three: 
@@ -33,6 +33,13 @@ UTILIZE! is a app designed to help you come up with great meal ideas based on in
     * Style All pages with Materialize CSS
     
 ## TECHNOLOGIES USED
-- MongoDB, Express, ReactJS, NodeJS, MaterializeCSS, CSS, EdamamAPI
-## FUTURE DEVELOPMENT/UNSOLVED PROBLEMS
+- MongoDB, Mongoose, Express, ReactJS, Redux, NodeJS, passport/JWT, MaterializeCSS, CSS, HTML, EdamamAPI
 
+## FUTURE DEVELOPMENT/UNSOLVED PROBLEMS
+- Create custom recipe form for user to build their own recipes and upload photos
+- Create custom logo for app
+- Create "pantry manager" model for user to keep track of all items on hand
+
+## Credits to:
+* MERN Authorization Guide - by: Rishi Prasad 
+* EDAMAM API
