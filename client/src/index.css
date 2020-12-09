@@ -119,6 +119,9 @@ h3 {
   width: 35%;
 }
 
+#comments {
+  color:  #fbd966;
+}
 
 article.nutri-info {
   background-color: #fcf1c6;

@@ -24,6 +24,11 @@ class LibraryShow extends React.Component {
       })
   }
 
+  updateRecipe = () => {
+    const recId = this.props.match.params.id;
+    this.props.history.push('/recipes/library/edit');
+  }
+
   deleteRecipe = () => {
     const recId = this.props.match.params.id;
     RecipeModel.delete(recId)
@@ -74,7 +79,7 @@ class LibraryShow extends React.Component {
               </textarea>
             </article>
             <button class="btn waves-effect waves-light" id="recipe-update" 
-              type="submit" name="action" >Update Recipe
+              type="submit" name="action" onClick={this.updateRecipe}>Update Recipe
               <i class="material-icons right">send</i>
             </button>
             <button class="btn waves-effect waves-light" id="recipe-delete" 
