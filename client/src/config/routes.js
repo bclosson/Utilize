@@ -18,8 +18,8 @@ export default (
     <Route path='/login' component={ Login } />
     <Route path='/recipes/new' component={ NewRecipe } />
     <Route path='/recipes/show' component={ RecipeShow } />
-    <Route path='/recipes/library/:id' component={ LibraryShow } />
     <Route path='/recipes/library/edit' component={ LibraryEdit } />
+    <Route path='/recipes/library/:id' component={ LibraryShow } />
     <Route path='/recipes/library' component={ UserRecipes } />
     <Route path='/recipes' component={ RecipeList } />
   </Switch>

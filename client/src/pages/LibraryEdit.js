@@ -6,17 +6,22 @@ class LibraryEdit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    recipe: {},
+    recipe: {
+      name: '',
+      image: '',
+      ingredients: [],
+      comments: ''
+    },
     recId: '',
     }
   }
 
   componentDidMount() {
-    const recId = this.props.match.params.id;
+    const recId = this.props.location.state;
     RecipeModel.getOne(recId)
       .then((data) => {
 
-        this.setState({ recipe: data.recipe, recId: this.props.match.params.id })
+        this.setState({ recipe: data.recipe, recId: this.props.location.state })
       })
   }
 
@@ -30,43 +35,47 @@ class LibraryEdit extends React.Component {
 
   render() {
     let recipe = this.state.recipe;
-    console.log(this.state);
-
+    console.log('this is editForm state:', this.state);
+    console.log('this is editForm props:', this.props);
   return(
     <div className="row">
       <form className="col s12">
         <div className="row">
           <div className="input-field col s6">
-            <input placeholder="Placeholder" id="first_name" type="text" className="validate" />
-            <label for="first_name">Recipe Name</label>
+            <label for="recipe-name">Recipe Name</label>
+            <input placeholder={recipe.name} id="edit-name" type="text" className="validate" />
           </div>
           <div className="input-field col s6">
+            <label for="last_name">Recipe Image URL: </label>
             <input id="last_name" type="text" className="validate" />
-            <label for="last_name">Recipe Image</label>
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
-            <input disabled value="I am not editable" id="disabled" type="text" className="validate" />
-            <label for="disabled">Ingredients</label>
+            <label for="ingredients">Ingredients</label>
+            <input placeholder={recipe.ingredients} id="edit-ingredients" type="text" className="validate" />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
-            <input id="password" type="password" className="validate" />
-            <label for="password">Servings: </label>
+            <label for="servings">Servings: </label>
+            <input placeholder={recipe.servings} id="edit-servings" type="text" className="validate" />
           </div>
         </div>
         <div className="row">
           <form className="col s12">
             <div className="row">
               <div className="input-field col s12">
-                <textarea id="textarea1" className="materialize-textarea"></textarea>
-                <label for="textarea1">Comments: </label>
+                <label for="recipe-comments">Comments: </label>
+                <textarea id="recipe-comments" className="materialize-textarea"></textarea>
               </div>
             </div>
           </form>
         </div>
+        <button class="btn waves-effect waves-light" id="recipe-update" 
+          type="submit" name="action" onClick={this.updateRecipe}>Update Recipe
+          <i class="material-icons right">send</i>
+        </button>
       </form>
     </div>
     )

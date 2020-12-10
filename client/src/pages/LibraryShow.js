@@ -24,9 +24,9 @@ class LibraryShow extends React.Component {
       })
   }
 
-  updateRecipe = () => {
+  editRecipe = () => {
     const recId = this.props.match.params.id;
-    this.props.history.push('/recipes/library/edit');
+    this.props.history.push('/recipes/library/edit', recId);
   }
 
   deleteRecipe = () => {
@@ -37,9 +37,11 @@ class LibraryShow extends React.Component {
     .then((res) => this.props.history.push('/recipes/library'));
   };
   
+  
   render() {
     console.log('this is LibraryShow state:',this.state);
     const recipe = this.state.recipe;
+
     return (
       <div className="profile-container">
           <h3>{recipe.name}</h3>
@@ -79,7 +81,7 @@ class LibraryShow extends React.Component {
               </textarea>
             </article>
             <button class="btn waves-effect waves-light" id="recipe-update" 
-              type="submit" name="action" onClick={this.updateRecipe}>Update Recipe
+              type="submit" name="action" onClick={this.editRecipe}>Edit Recipe
               <i class="material-icons right">send</i>
             </button>
             <button class="btn waves-effect waves-light" id="recipe-delete" 
