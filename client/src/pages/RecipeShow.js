@@ -27,7 +27,7 @@ const RecipeShow = (props) => {
     RecipeModel.create(savedRecipe)
       .then((data) => {
         //redirect after new recipe is submitted to database
-        props.history.push('/recipes/new');
+        props.history.push('/recipes/library');
       })
   }
 
