@@ -74,11 +74,11 @@ class LibraryShow extends React.Component {
             </article>
           </div>
           <br/>
-          <div className="card" id="comment-box">
+          <div className="card" id="text-box">
             <article className="comments">
               <h6>Comments:</h6>
               <textarea name="comments" id="comments" cols="30" rows="10"
-                value="" >
+                type="text" value={recipe.comments} >
               </textarea>
             </article>
             <button class="btn waves-effect waves-light" id="recipe-update" 

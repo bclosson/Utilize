@@ -12,8 +12,8 @@ class LibraryEdit extends React.Component {
           image: '',
           ingredients: [],
           servings: '',
-          comments: ''
-        },
+          comments: '',
+        }, 
           recId: ''
     }
   }
@@ -89,7 +89,7 @@ class LibraryEdit extends React.Component {
     // console.log('STRING ING:', ingredientString);
     console.log('this is editForm state:', this.state);
     console.log('this is editForm props:', this.props);
-
+    console.log('COMMENTS:', recipe.comments);
   return (
     <div className="row">
     <h3>Edit Recipe</h3>
@@ -123,6 +123,14 @@ class LibraryEdit extends React.Component {
           </div>
         </div>
         <div className="row">
+          <div className="input-field col s12">
+            <label htmlFor="comments">Comments: </label><br />
+            <input value={recipe.comments} id="edit-comments" type="text" 
+              name="comments" ref="comments" 
+              onChange={this.handleInputChange} />
+          </div>
+        </div>
+        {/* <div className="row">
           <form className="col s12">
             <div className="row">
               <div className="input-field col s12">
@@ -134,7 +142,7 @@ class LibraryEdit extends React.Component {
               </div>
             </div>
           </form>
-        </div>
+        </div> */}
         <button className="btn waves-effect waves-light" id="recipe-update" 
           type="submit" name="action" onSubmit={this.updateRecipe}>Update Recipe
           <i class="material-icons right">send</i>
