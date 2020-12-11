@@ -3,85 +3,131 @@ import  RecipeModel from '../models/recipe';
 
 
 class LibraryEdit extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    recipe: {
-      name: '',
-      image: '',
-      ingredients: [],
-      comments: ''
-    },
-    recId: '',
+    state = {
+      recipe: {
+        name: '',
+        image: '',
+        ingredients: [],
+        servings: '',
+        comments: ''
+      },
+        recId: ''
     }
-  }
 
-  componentDidMount() {
+    // this.handleInputChange = this.handleInputChange.bind(this);
+
+  componentDidMount = () => {
     const recId = this.props.location.state;
+    console.log('REC ID:', recId);
     RecipeModel.getOne(recId)
       .then((data) => {
-
-        this.setState({ recipe: data.recipe, recId: this.props.location.state })
-      })
+        console.log('this is DATA:', data);
+        this.setState({ 
+          name: data.recipe.name, 
+          image: data.recipe.image,
+          ingredients: data.recipe.ingredients,
+          servings: data.recipe.servings,
+          comments: data.recipe.comments,
+          recId: this.props.location.state
+        });
+      });
   }
 
-  updateRecipe = () => {
-    const recId = this.props.location.state;
-    RecipeModel.update(recId)
-      .then((res) => {
-      })
-      .then((res) => this.props.history.push('/recipes/library'));
-  };
+  
+  handleInputChange(event) {
+      const target = event.target;
+      const value = target.value;
+      const name = target.name;
+    
+      this.setState({
+          [name]: value
+        });
+      }
+      
+      // handleInputChange = (event) => {
+      //   if (event.target.name === 'completed') {
+      //     this.setState((prevState) => {
+      //       return { completed: !prevState.completed };
+      //     });
+      //   } else {
+      //     this.setState({ [event.target.name]: event.target.value });
+      //   }
+      // }
+
+      updateRecipe = (event) => {
+        event.preventDefault();
+    
+        const recId = this.props.location.state;
+        RecipeModel.update(recId, this.state)
+          .then((data) => {
+            console.log('updatedRecipe:', data);
+    
+            this.props.history.push(`/recipes/library/${recId}`);
+          })
+      };
 
   render() {
-    let recipe = this.state.recipe;
+    if (this.state.loading) {
+      return <h1>Loading</h1>
+    } else if (this.state.error) {
+      return <h1>Error Getting Data</h1>
+    } else {
+      
+    
+
+    let recipe = this.state;
     console.log('this is editForm state:', this.state);
     console.log('this is editForm props:', this.props);
 
-  return(
+  return (
     <div className="row">
-      <form onSubmit={this.onSubmit} className="col s12">
+    <h3>Edit Recipe</h3>
+      <form onSubmit={this.updateRecipe} className="col s12">
         <div className="row">
           <div className="input-field col s6">
-            <label for="recipe-name">Recipe Name:</label><br />
-            <input placeholder={recipe.name} id="edit-name" type="text" className="validate" ref="name" />
+            <label htmlFor="recipe-name">Recipe Name:</label><br />
+            <input value={recipe.name} id="edit-name" type="text" 
+            ref="name" onChange={this.handleInputChange} />
           </div>
           <div className="input-field col s6">
-            <label for="edit-image">Recipe Image URL: </label><br />
-            <input id="edit-image" type="text" className="validate" ref="image" />
+            <label htmlFor="edit-image">Recipe Image URL: </label><br />
+            <input value={recipe.image} id="edit-image" type="text" ref="image" 
+              onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
-            <label for="ingredients">Ingredients:</label><br />
-            <input placeholder={recipe.ingredients} id="edit-ingredients" type="text" className="validate"
-              ref="ingredients" />
+            <label htmlFor="ingredients">Ingredients:</label><br />
+            <input value={recipe.ingredients} id="edit-ingredients" type="text"
+              ref="ingredients" onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
-            <label for="servings">Servings: </label><br />
-            <input placeholder={recipe.servings} id="edit-servings" type="text" className="validate" 
-              ref="servings" />
+            <label htmlFor="servings">Servings: </label><br />
+            <input value={recipe.servings} id="edit-servings" type="text" 
+              ref="servings" onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
           <form className="col s12">
             <div className="row">
               <div className="input-field col s12">
-                <label for="recipe-comments">Comments: </label><br />
-                <textarea id="recipe-comments" className="materialize-textarea"></textarea>
+                <label htmlFor="recipe-comments">Comments: </label><br />
+                <textarea id="recipe-comments" className="materialize-textarea" ref="comments"
+                  value={recipe.comments} onChange={this.handleInputChange} ></textarea>
               </div>
             </div>
           </form>
         </div>
-        <button class="btn waves-effect waves-light" id="recipe-update" 
+        <button className="btn waves-effect waves-light" id="recipe-update" 
           type="submit" name="action" onSubmit={this.updateRecipe}>Update Recipe
           <i class="material-icons right">send</i>
         </button>
       </form>
     </div>
     )
+  }
   }
 }
 

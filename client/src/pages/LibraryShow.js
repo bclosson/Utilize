@@ -26,6 +26,7 @@ class LibraryShow extends React.Component {
 
   editRecipe = () => {
     const recId = this.props.match.params.id;
+    console.log('SHOW recID:', recId);
     this.props.history.push('/recipes/library/edit', recId);
   }
 
@@ -76,8 +77,8 @@ class LibraryShow extends React.Component {
           <div className="card" id="comment-box">
             <article className="comments">
               <h6>Comments:</h6>
-              <textarea name="comments" id="comments" cols="30" rows="10">
-
+              <textarea name="comments" id="comments" cols="30" rows="10"
+                value="" >
               </textarea>
             </article>
             <button class="btn waves-effect waves-light" id="recipe-update" 

@@ -180,6 +180,11 @@ h6 {
   margin: 2px;
 }
 
+/* RECIPE EDIT PAGE */
+#recipe-comments {
+  color:  #fbd966;
+}
+
 /* FOOTER */
 .page-footer {
   background-color: #bc6d2d;
