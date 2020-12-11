@@ -3,17 +3,20 @@ import  RecipeModel from '../models/recipe';
 
 
 class LibraryEdit extends React.Component {
-    state = {
-      recipe: {
-        name: '',
-        image: '',
-        ingredients: [],
-        servings: '',
-        comments: ''
-      },
-        recId: ''
-    }
+  constructor(props) {
+    super(props);
 
+    this.state = {
+        recipe: {
+          name: '',
+          image: '',
+          ingredients: [],
+          servings: '',
+          comments: ''
+        },
+          recId: ''
+    }
+  }
     // this.handleInputChange = this.handleInputChange.bind(this);
 
   componentDidMount = () => {
@@ -34,13 +37,14 @@ class LibraryEdit extends React.Component {
   }
 
   
-  handleInputChange(event) {
+  handleInputChange = (event) => {
+    event.preventDefault();
       const target = event.target;
       const value = target.value;
       const name = target.name;
     
       this.setState({
-          [name]: value
+        [name]: value
         });
       }
       
@@ -76,6 +80,13 @@ class LibraryEdit extends React.Component {
     
 
     let recipe = this.state;
+    // let ingredientList = JSON.stringify(recipe.ingredients);
+    // console.log('INGREDIENTS:', ingredientList);
+    
+    // let ingredientString = () => ingredientList.map((str) => {
+    //   return str;
+    // });
+    // console.log('STRING ING:', ingredientString);
     console.log('this is editForm state:', this.state);
     console.log('this is editForm props:', this.props);
 
@@ -87,26 +98,28 @@ class LibraryEdit extends React.Component {
           <div className="input-field col s6">
             <label htmlFor="recipe-name">Recipe Name:</label><br />
             <input value={recipe.name} id="edit-name" type="text" 
-            ref="name" onChange={this.handleInputChange} />
+            name="name" ref="name" onChange={this.handleInputChange} />
           </div>
           <div className="input-field col s6">
             <label htmlFor="edit-image">Recipe Image URL: </label><br />
-            <input value={recipe.image} id="edit-image" type="text" ref="image" 
-              onChange={this.handleInputChange} />
+            <input value={recipe.image} id="edit-image" type="text" 
+              name="image" ref="image" onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
             <label htmlFor="ingredients">Ingredients:</label><br />
-            <input value={recipe.ingredients} id="edit-ingredients" type="text"
-              ref="ingredients" onChange={this.handleInputChange} />
+            <input value={recipe.ingredients} id="edit-ingredients" 
+              type="text" name="ingredients" ref="ingredients" 
+              onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
             <label htmlFor="servings">Servings: </label><br />
             <input value={recipe.servings} id="edit-servings" type="text" 
-              ref="servings" onChange={this.handleInputChange} />
+              name="servings" ref="servings" 
+              onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
@@ -114,8 +127,10 @@ class LibraryEdit extends React.Component {
             <div className="row">
               <div className="input-field col s12">
                 <label htmlFor="recipe-comments">Comments: </label><br />
-                <textarea id="recipe-comments" className="materialize-textarea" ref="comments"
-                  value={recipe.comments} onChange={this.handleInputChange} ></textarea>
+                <textarea id="recipe-comments" className="materialize-textarea" 
+                  name="comments" ref="comments" value={recipe.comments} 
+                  onChange={this.handleInputChange}>
+                </textarea>
               </div>
             </div>
           </form>
