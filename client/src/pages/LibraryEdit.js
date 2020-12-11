@@ -17,14 +17,13 @@ class LibraryEdit extends React.Component {
           recId: ''
     }
   }
-    // this.handleInputChange = this.handleInputChange.bind(this);
 
   componentDidMount = () => {
     const recId = this.props.location.state;
-    console.log('REC ID:', recId);
+    
     RecipeModel.getOne(recId)
       .then((data) => {
-        console.log('this is DATA:', data);
+        
         this.setState({ 
           name: data.recipe.name, 
           image: data.recipe.image,
@@ -47,16 +46,6 @@ class LibraryEdit extends React.Component {
         [name]: value
         });
       }
-      
-      // handleInputChange = (event) => {
-      //   if (event.target.name === 'completed') {
-      //     this.setState((prevState) => {
-      //       return { completed: !prevState.completed };
-      //     });
-      //   } else {
-      //     this.setState({ [event.target.name]: event.target.value });
-      //   }
-      // }
 
       updateRecipe = (event) => {
         event.preventDefault();
@@ -89,7 +78,7 @@ class LibraryEdit extends React.Component {
     // console.log('STRING ING:', ingredientString);
     console.log('this is editForm state:', this.state);
     console.log('this is editForm props:', this.props);
-    console.log('COMMENTS:', recipe.comments);
+    
   return (
     <div className="row">
     <h3>Edit Recipe</h3>
@@ -130,19 +119,6 @@ class LibraryEdit extends React.Component {
               onChange={this.handleInputChange} />
           </div>
         </div>
-        {/* <div className="row">
-          <form className="col s12">
-            <div className="row">
-              <div className="input-field col s12">
-                <label htmlFor="recipe-comments">Comments: </label><br />
-                <textarea id="recipe-comments" className="materialize-textarea" 
-                  name="comments" ref="comments" value={recipe.comments} 
-                  onChange={this.handleInputChange}>
-                </textarea>
-              </div>
-            </div>
-          </form>
-        </div> */}
         <button className="btn waves-effect waves-light" id="recipe-update" 
           type="submit" name="action" onSubmit={this.updateRecipe}>Update Recipe
           <i class="material-icons right">send</i>

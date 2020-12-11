@@ -14,7 +14,6 @@ class LibraryShow extends React.Component {
   
   componentDidMount() {
     const recId = this.props.match.params.id;
-    console.log('this is mounted props:', this.props);
 
     RecipeModel.getOne(recId)
       .then((data) => {
@@ -26,7 +25,7 @@ class LibraryShow extends React.Component {
 
   editRecipe = () => {
     const recId = this.props.match.params.id;
-    console.log('SHOW recID:', recId);
+
     this.props.history.push('/recipes/library/edit', recId);
   }
 
@@ -40,7 +39,6 @@ class LibraryShow extends React.Component {
   
   
   render() {
-    console.log('this is LibraryShow state:',this.state);
     const recipe = this.state.recipe;
 
     return (
