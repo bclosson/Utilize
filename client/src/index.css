@@ -188,20 +188,41 @@ h6 {
 
 /* FOOTER */
 .page-footer {
+  display: flex;
+  justify-content: space-between;
   align-content: left;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  margin: 0;
+  margin: 0, 0;
   background-color: #bc6d2d;
+}
+
+/* #badge-wrapper {
+  align-content: center;
+} */
+
+#edamam-badge {
+  justify-content: left;
 }
 
 #footer-container {
   margin: 0;
 }
 
-#copywrite {
+
+
+#footer-copywrite {
   color: #fbd966;
   text-align: right;
+  justify-content: right;
+  padding: 0;
+  margin: 0, 0, 0, 818px;
 }
+/* #copywrite {
+  color: #fbd966;
+  text-align: right;
+  justify-content: right;
+  margin: 0, 0, 0, 418px;
+} */
