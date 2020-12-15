@@ -5,12 +5,12 @@ const LibraryCards = (props) => {
   console.log('LibraryCards Props:', props);
 
   return (
-    <div className="row">
-    <div className="col s6 m7">
+    <div className="row" id="card-row">
+    <div className="row s6 m7">
       <div className="card" id="library-recipe">
         <div className="card-image">
           <img src={props.recipe.image} id="library-recipe-image" alt="Recipe"/>
-          <span className="card-title">{ props.recipe.name }</span>
+          <span className="card-title" id="recipe-name">{ props.recipe.name }</span>
         </div>
         <div className="card-content">
           <p>Servings: { props.recipe.servings }</p>
@@ -18,7 +18,7 @@ const LibraryCards = (props) => {
           
         </div>
         <div className="card-action" id="card-action">
-          <Link to={`/recipes/library/${props.recipe._id}`}>
+          <Link id="full-recipe-link" to={`/recipes/library/${props.recipe._id}`}>
             Click For Full Recipe
           </Link>
         </div>

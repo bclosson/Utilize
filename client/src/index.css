@@ -182,11 +182,20 @@ h6 {
 }
 
 /* LIBRARY CARD */
+#card-row {
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 25%;
+  margin: 10px 25px;
+}
+
 #library-recipe {
   border-radius: 10px;
-  /* border-top-right-radius: 10px;
-  border-top-left-radius: 10px; */
   box-shadow: 0 4px 8px 0 #ff6f00;
+  width: 100%;
+  height: auto;
 }
 
 #library-recipe-image {
@@ -195,8 +204,18 @@ h6 {
 }
 
 #card-action {
+  text-align: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+#full-recipe-link:hover {
+  font-size: 102%;
+}
+
+#full-recipe-link {
+  color: black;
+  margin: 0;
 }
 
 /* RECIPE EDIT PAGE */
