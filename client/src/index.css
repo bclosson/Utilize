@@ -181,6 +181,24 @@ h6 {
   margin: 2px;
 }
 
+/* LIBRARY CARD */
+#library-recipe {
+  border-radius: 10px;
+  /* border-top-right-radius: 10px;
+  border-top-left-radius: 10px; */
+  box-shadow: 0 4px 8px 0 #ff6f00;
+}
+
+#library-recipe-image {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#card-action {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 /* RECIPE EDIT PAGE */
 #recipe-comments {
   color:  #fbd966;
@@ -199,10 +217,6 @@ h6 {
   background-color: #bc6d2d;
 }
 
-/* #badge-wrapper {
-  align-content: center;
-} */
-
 #edamam-badge {
   justify-content: left;
 }
@@ -211,18 +225,11 @@ h6 {
   margin: 0;
 }
 
-
-
 #footer-copywrite {
   color: #fbd966;
+  background-color: none;
   text-align: right;
   justify-content: right;
   padding: 0;
-  margin: 0, 0, 0, 818px;
+ 
 }
-/* #copywrite {
-  color: #fbd966;
-  text-align: right;
-  justify-content: right;
-  margin: 0, 0, 0, 418px;
-} */
