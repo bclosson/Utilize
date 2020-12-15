@@ -103,6 +103,7 @@ h1 {
   color: #fbd966;
   font-weight: 400;
   text-shadow: 2px 2px black;
+  margin: 20px;
 }
 #ingredients.card {
   background-color: #fcf1c6;
@@ -118,6 +119,16 @@ h1 {
   width: 100%;
 }
 
+#recipe {
+  background-color: #fcf1c6;
+  box-shadow: 0 4px 8px 0 #ff6f00;
+  justify-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 20px;
+  width: 30%;
+}
+
 #recipe-image {
   background-color: #fbd966;
   justify-content: center;
@@ -126,48 +137,43 @@ h1 {
   width: 35%;
 }
 
-#comments {
-  color:  #fbd966;
-}
 
-article.nutri-info {
+/* #nutri-container {
+  box-shadow: 0 4px 8px 0 #ff6f00; 
+} */
+
+/* #ingredients-container {
   background-color: #fcf1c6;
+  box-shadow: 0 4px 8px 0 #ff6f00;
   border-radius: 10px;
   padding: 10px;
-  margin: 0 20px 0 20px;
-}
+  margin: 0px 20px 0px 20px;
+} */
 
-#ingredients.card {
+#show-ingredients {
   background-color: #fcf1c6;
-  border-radius: 10px;
-}
-
-#show-ingredients.card {
-  background-color: #fcf1c6;
+  box-shadow: 0 4px 8px 0 #ff6f00;
   border-radius: 10px;
   padding: 10px;
   margin: 0;
 }
 
-#ingredients-container {
+article.nutri-info {
   background-color: #fcf1c6;
+  box-shadow: 0 4px 8px 0 #ff6f00;
   border-radius: 10px;
   padding: 10px;
-  margin: 0px 20px 0px 20px;
+  margin: 0 20px 0 20px;
 }
+
+#ingredients {
+  border-radius: 10px;
+}
+
 
 #lib-img {
   border-radius: 10px;
   width: 100%;
-}
-
-#recipe {
-  background-color: #fcf1c6;
-  justify-items: center;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 10px;
-  width: 30%;
 }
 
 a {
@@ -176,7 +182,23 @@ a {
 
 h6 {
   color: #ff6f00;
-  margin: 0 0 0 20px;
+  margin: 5px 0 5px 20px;
+  text-shadow: 1px 1px #283618;
+}
+
+#nutri-p {
+  padding: 2px;
+}
+
+#comments {
+  color:  #fbd966;
+  font-size: 18px; 
+  width: 98%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 #ff6f00;
+  padding: 10px 2px 2px 5px;
+  margin: 5px 20px 10px 20px;
 }
 
 #recipe-update {

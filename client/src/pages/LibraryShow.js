@@ -45,10 +45,10 @@ class LibraryShow extends React.Component {
       <div className="profile-container">
           <h3 id="show-name">{recipe.name}</h3>
           <div className="card" id="recipe">
-            <img src={recipe.image} id="lib-img" alt="Recipe Image"/>
+            <img src={recipe.image} id="rec-image" alt="Recipe Image"/>
           </div>
           <br/>
-           <a target="blank" href={recipe.recipeLink}>{recipe.name}</a>
+           <a target="_blank" href={recipe.recipeLink}>website:{recipe.name}</a>
           <aside>
             <div className="card" id="ingredients">
               <article className="card" id="show-ingredients">
@@ -60,15 +60,15 @@ class LibraryShow extends React.Component {
           <br />
           <div className="card" id="nutri-container">
             <article className="nutri-info">
-              <h6>Nutritional Information (per serving):</h6><br/>
-              <p>Servings: {Math.floor(recipe.servings)}</p>
-              <p>Calories per Serving: {Math.floor(recipe.calories / recipe.servings)}</p>
-              <p>Carbohydrates:{Math.floor(recipe.carbohydrates / recipe.servings)}g</p>
-              <p>Fat:{Math.floor(recipe.fat / recipe.servings)}g</p>
-              <p>Cholesterol:{Math.floor(recipe.cholesterol / recipe.servings)}mg</p>
-              <p>Fiber:{Math.floor(recipe.fiber / recipe.servings)}g</p>
-              <p>Protein:{Math.floor(recipe.protein / recipe.servings)}g</p>
-              <p>Sugars:{Math.floor(recipe.sugars / recipe.servings)}g</p>
+              <h6>Nutritional Information (per serving):</h6>
+              <p id="nutri-p">Servings: {Math.floor(recipe.servings)}</p>
+              <p id="nutri-p">Calories per Serving: {Math.floor(recipe.calories / recipe.servings)}</p>
+              <p id="nutri-p">Carbohydrates:{Math.floor(recipe.carbohydrates / recipe.servings)}g</p>
+              <p id="nutri-p">Fat:{Math.floor(recipe.fat / recipe.servings)}g</p>
+              <p id="nutri-p">Cholesterol:{Math.floor(recipe.cholesterol / recipe.servings)}mg</p>
+              <p id="nutri-p">Fiber:{Math.floor(recipe.fiber / recipe.servings)}g</p>
+              <p id="nutri-p">Protein:{Math.floor(recipe.protein / recipe.servings)}g</p>
+              <p id="nutri-p">Sugars:{Math.floor(recipe.sugars / recipe.servings)}g</p>
             </article>
           </div>
           <br/>

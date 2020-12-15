@@ -37,12 +37,12 @@ const RecipeShow = (props) => {
   let show = props.location.recipes;
     return(
       <div className="profile-container">
-        <h3>{show.name}</h3>
-        <div className="card" id="recipe-image">
+        <h3 id="show-name">{show.name}</h3>
+        <div className="card" id="recipe">
           <img id="rec-image" src={show.image} alt="Recipe Image"/>
         </div>
         <br/>
-        <a target="_blank" href={show.url}>{show.name}</a>
+        <a target="_blank" href={show.url}>website: {show.name}</a>
         <aside>
           <div className="card" id="ingredients">
             <article className="card" id="show-ingredients">
@@ -55,7 +55,7 @@ const RecipeShow = (props) => {
         <div className="card" id="nutri-container">
           <article className="nutri-info">
             
-              <h6>Nutritional Information (per serving):</h6><br/>
+              <h6>Nutritional Information (per serving):</h6>
               <h6>Servings: {show.servings}</h6>
               <p>Calories Per Serving: {Math.floor(show.calories / show.servings)}</p>
               <p>Carbohydrates: {Math.floor(show.carbs / show.servings)}g</p>
