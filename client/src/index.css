@@ -20,8 +20,10 @@ main {
   background-color: #bc6d2d;
 }
 
-nav .brand-logo {
-  color: black;
+#nav-title {
+  color: beige;
+  font-weight: 400;
+  text-shadow: 2px 2px black;
 }
 
 nav ul a {
@@ -80,6 +82,8 @@ input {
 /* RECIPE INDEX PAGE */
 h1 {
   color: #ff6f00;
+  font-weight: 400;
+  text-shadow: 2px 2px black;
 }
 
 #recipe-header {
@@ -201,6 +205,12 @@ h6 {
 #library-recipe-image {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+}
+
+#recipe-name {
+  color: beige;
+  font-weight: 400;
+  text-shadow: 2px 2px black;
 }
 
 #card-action {
