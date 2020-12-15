@@ -99,8 +99,10 @@ h1 {
 }
 
 /* RECIPE SHOW PAGE */
-h3 {
+#show-name {
   color: #fbd966;
+  font-weight: 400;
+  text-shadow: 2px 2px black;
 }
 #ingredients.card {
   background-color: #fcf1c6;

@@ -42,7 +42,7 @@ const RecipeShow = (props) => {
           <img id="rec-image" src={show.image} alt="Recipe Image"/>
         </div>
         <br/>
-        <a href={show.url}>{show.name}</a>
+        <a target="_blank" href={show.url}>{show.name}</a>
         <aside>
           <div className="card" id="ingredients">
             <article className="card" id="show-ingredients">

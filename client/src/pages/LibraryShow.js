@@ -43,12 +43,12 @@ class LibraryShow extends React.Component {
 
     return (
       <div className="profile-container">
-          <h3>{recipe.name}</h3>
+          <h3 id="show-name">{recipe.name}</h3>
           <div className="card" id="recipe">
             <img src={recipe.image} id="lib-img" alt="Recipe Image"/>
           </div>
           <br/>
-           <a href={recipe.recipeLink}>{recipe.name}</a>
+           <a target="blank" href={recipe.recipeLink}>{recipe.name}</a>
           <aside>
             <div className="card" id="ingredients">
               <article className="card" id="show-ingredients">
