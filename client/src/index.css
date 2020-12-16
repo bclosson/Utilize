@@ -37,6 +37,15 @@ nav ul a {
 
 }
 
+/* HOME PAGE */
+#home-container {
+  margin: 5% auto;
+  background-image: url("./images/beautiful-dessert.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
 /* TEXT LOGIN/REGISTER */
 .grey-text.text-darken-1 {
   color: #fbd966 !important
@@ -260,7 +269,12 @@ h6 {
   text-shadow: 2px 2px black;
 }
 
+/* #card-content {
+  background-color: linear-gradient(#ff6f00,#fbd966)
+} */
+
 #card-action {
+  background-color: #fbd966;
   text-align: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;

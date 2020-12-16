@@ -5,14 +5,9 @@ import { Link } from "react-router-dom";
 class Home extends Component {
   render() {
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <div style={{ height: "75vh" }} className="container valign-wrapper" id="home-container">
         <div className="row">
           <div className="col s12 center-align">
-            {/* <h4>
-              <b>Utilize!</b> an app that the{" "}
-              <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
-              scratch
-            </h4> */}
             <p className="flow-text grey-text text-darken-1">
               Register or Log-in to begin Utilizing your pantry!
             </p>

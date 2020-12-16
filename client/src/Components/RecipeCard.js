@@ -15,7 +15,7 @@ const RecipeCard = (props) => {
             <img src={recipe.image} id="library-recipe-image" alt="Recipe"/>
             <span className="card-title" id="recipe-name">{ recipe.label }</span>
           </div>
-          <div className="card-content">
+          <div className="card-content" id="card-content">
             <p>Servings: { recipe.yield }</p>
             <p>Calories Per Serving: { Math.floor(recipe.calories / recipe.yield) }</p>
             

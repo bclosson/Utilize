@@ -31,7 +31,7 @@ class NewRecipe extends React.Component {
             <form className="col s12">
               <div className="row">
                 <div className="input-field col s6">
-                  <h3 id="new-title">Submit Up to Ten Ingredients</h3>
+                  <h3 id="new-title">Submit Up To Ten Ingredients</h3>
                   <label for="ingredients"></label>
                   <input 
                     id="ingredients-input"                  
