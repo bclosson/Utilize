@@ -8,20 +8,20 @@ const RecipeCard = (props) => {
   
   
   return(
-    <div className="row">
-      <div className="col s6 m7">
-        <div className="card">
+    <div className="row" id="card-row">
+      <div className="row s6 m7">
+        <div className="card" id="library-recipe">
           <div className="card-image">
-            <img src={recipe.image} alt="Recipe"/>
-            <span className="card-title">{ recipe.label }</span>
+            <img src={recipe.image} id="library-recipe-image" alt="Recipe"/>
+            <span className="card-title" id="recipe-name">{ recipe.label }</span>
           </div>
           <div className="card-content">
             <p>Servings: { recipe.yield }</p>
             <p>Calories Per Serving: { Math.floor(recipe.calories / recipe.yield) }</p>
             
           </div>
-          <div className="card-action">
-            <Link to={{
+          <div className="card-action" id="card-action">
+            <Link id="full-recipe-link" to={{
               pathname:'/recipes/show',
               recipes: {
                 recKey: props.recKey,

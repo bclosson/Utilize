@@ -31,14 +31,16 @@ class NewRecipe extends React.Component {
             <form className="col s12">
               <div className="row">
                 <div className="input-field col s6">
-                  <input                   
+                  <h3 id="new-title">Submit Up to Ten Ingredients</h3>
+                  <label for="ingredients"></label>
+                  <input 
+                    id="ingredients-input"                  
                     name="ingredients"
                     type="text"
                     className="input-field"
                     placeholder='Ingredients' 
                     onChange={ this.handleChange } 
                   />
-                  <label for="ingredients"></label>
                 </div>
               </div>
               <Link className = 'btn button-blue spacing' to={{

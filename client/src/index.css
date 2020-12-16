@@ -79,6 +79,7 @@ code {
 input {
   color: #fbd966;
 }
+
 /* RECIPE INDEX PAGE */
 h1 {
   color: #ff6f00;
@@ -98,7 +99,21 @@ h1 {
   background-color: #d68535;
 }
 
-/* RECIPE SHOW PAGE */
+/* NEW RECIPE */
+#new-title {
+  color: #fbd966;
+  font-weight: 400;
+  text-shadow: 2px 2px black;
+  margin: 20px;
+}
+
+#ingredients-input {
+  color: #fbd966;
+  margin: 5px 0 5px 20px;
+  text-shadow: 1px 1px #283618;
+}
+
+/* RECIPE/LIBRARY SHOW PAGE */
 #show-name {
   color: #fbd966;
   font-weight: 400;
@@ -217,7 +232,7 @@ h6 {
   margin: 0 0 0 20px;
 }
 
-/* LIBRARY CARD */
+/* RECIPE/LIBRARY CARD */
 #card-row {
   display: flex;
   float: left;
