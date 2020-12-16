@@ -72,7 +72,7 @@ const RecipeShow = (props) => {
           <article className="comments">
             <h6>Comments:</h6>
           </article>
-          <button className="btn" id="recipe-submit" 
+          <button className="btn" id="save-rec-btn" 
             type="submit" name="action" onClick={onSubmit}>Save Recipe
             <i className="material-icons right">send</i>
           </button>

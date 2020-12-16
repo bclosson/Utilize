@@ -119,7 +119,7 @@ class LibraryEdit extends React.Component {
               onChange={this.handleInputChange} />
           </div>
         </div>
-        <button className="btn" id="recipe-update" 
+        <button className="btn" id="recipe-update-btn" 
           type="submit" name="action" onSubmit={this.updateRecipe}>Update Recipe
           <i class="material-icons right">send</i>
         </button>

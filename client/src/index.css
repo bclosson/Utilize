@@ -29,7 +29,6 @@ main {
 nav ul a {
   color: #fbd966;
   background-color: none;
-  /* background-color: #fbd966; */
   align-items: center;
   margin: 2px;
   border-radius: 5px;
@@ -48,17 +47,39 @@ nav ul a {
 }
 /* TEXT LOGIN/REGISTER */
 .grey-text.text-darken-1 {
-  color: #fbd966 !important
+  color: #fbd966 !important;
+  text-shadow: 2px 2px black;
 }
 
 /* LOGIN/REGISTER BUTTONS */
 /* Register */
-.blue.accent-3 {
+#register-button {
+  color: #283618;
+  text-shadow: 1px 1px beige;
   background-color: #d68535 !important;
+  box-shadow: 0 4px 8px 0 #283618;
+  width: "140px";
+  border-radius: 3px;
+  letter-spacing: 1.5px;
 }
+
+#register-button:hover {
+  background-color: #bc6d2d !important;
+}
+
 /* Login */
-.white {
+#login-button {
+  color: #283618;
+  text-shadow: 1px 1px beige;
   background-color: #d68535 !important;
+  box-shadow: 0 4px 8px 0 #283618;
+  width: 140px;
+  border-radius: 3px;
+  letter-spacing: 1.5px;
+}
+
+#login-button:hover {
+  background-color: #bc6d2d !important;
 }
 
 /* LOGIN PAGE */
@@ -70,14 +91,65 @@ a {
   color: #ff6f00;
 }
 
-button {
-  background-color: #fbd966;
+#login-btn {
+  color: #283618;
+  text-shadow: 1px 1px beige;
+  background-color: #d68535 !important;
+  box-shadow: 0 2px 4px 0 #ff6f00;
+  width: 140px;
+  height: 50px;
+  border-radius: 3px;
+  letter-spacing: 1.5px;
 }
 
-/* NEW RECIPE PAGE */
-.btn {
-  color: black;
-  background-color: #fbd966;
+#login-btn:hover {
+  background-color: #bc6d2d !important;
+}
+
+/* REGISTER PAGE */
+#register-btn {
+  color: #283618;
+  text-shadow: 1px 1px beige;
+  background-color: #d68535 !important;
+  box-shadow: 0 2px 4px 0 #ff6f00;
+  width: 140px;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  letter-spacing: 1.5px;
+}
+
+#register-btn:hover {
+  background-color: #bc6d2d !important;
+}
+
+/* NEW RECIPE */
+#new-title {
+  color: #fbd966;
+  font-weight: 400;
+  text-shadow: 2px 2px black;
+  margin: 20px;
+}
+
+#ingredients-input {
+  color: #fbd966;
+  margin: 5px 0 5px 20px;
+  text-shadow: 1px 1px #283618;
+}
+
+#new-rec-btn {
+  color: #283618;
+  text-shadow: 1px 1px beige;
+  background-color: #d68535;
+  box-shadow: 0 2px 4px 0 #ff6f00;
+  border-radius: 3px;
+  height: 50px;
+  text-align: center;
+  padding: 8px;
+}
+
+#new-rec-btn:hover {
+  background-color: #bc6d2d;
 }
 
 code {
@@ -108,19 +180,6 @@ h1 {
   background-color: #d68535;
 }
 
-/* NEW RECIPE */
-#new-title {
-  color: #fbd966;
-  font-weight: 400;
-  text-shadow: 2px 2px black;
-  margin: 20px;
-}
-
-#ingredients-input {
-  color: #fbd966;
-  margin: 5px 0 5px 20px;
-  text-shadow: 1px 1px #283618;
-}
 
 /* RECIPE/LIBRARY SHOW PAGE */
 #show-name {
@@ -181,6 +240,22 @@ article.nutri-info {
   border-radius: 10px;
 }
 
+#save-rec-btn {
+  color: #283618;
+  text-shadow: 1px 1px beige;
+  background-color: #d68535;
+  box-shadow: 0 2px 4px 0 #ff6f00;
+  border-radius: 3px;
+  height: 50px;
+  text-align: center;
+  padding: 8px;
+}
+
+#save-rec-btn:hover {
+  background-color: #bc6d2d;
+}
+
+/* RECIPE LIBRARY */
 #lib-img {
   border-radius: 10px;
   width: 100%;
@@ -211,12 +286,36 @@ h6 {
   margin: 5px 20px 10px 20px;
 }
 
-#recipe-update {
-  margin: 2px;
+#recipe-edit-btn {
+  color: #283618;
+  text-shadow: 1px 1px beige;
+  background-color: #d68535;
+  box-shadow: 0 2px 4px 0 #ff6f00;
+  border-radius: 3px;
+  height: 50px;
+  text-align: center;
+  padding: 8px;
+  margin: 0 5px 0 20px;
 }
 
-#recipe-delete {
-  margin: 2px;
+#recipe-edit-btn:hover {
+  background-color: #bc6d2d;
+}
+
+#recipe-delete-btn {
+  color: #283618;
+  text-shadow: 1px 1px beige;
+  background-color: #d68535;
+  box-shadow: 0 2px 4px 0 #ff6f00;
+  border-radius: 3px;
+  height: 50px;
+  text-align: center;
+  padding: 8px;
+  margin: 5px;
+}
+
+#recipe-delete-btn:hover {
+  background-color: #bc6d2d;
 }
 
 /* RECIPE EDIT */
@@ -237,8 +336,20 @@ h6 {
   margin: 5px 0 5px 20px;
   text-shadow: 1px 1px #283618;
 }
-#recipe-update {
+#recipe-update-btn {
+  color: #283618;
+  text-shadow: 1px 1px beige;
+  background-color: #d68535;
+  box-shadow: 0 2px 4px 0 #ff6f00;
+  border-radius: 3px;
+  height: 50px;
+  text-align: center;
+  padding: 8px;
   margin: 0 0 0 20px;
+}
+
+#recipe-update-btn:hover {
+  background-color: #bc6d2d;
 }
 
 /* RECIPE/LIBRARY CARD */
@@ -268,10 +379,6 @@ h6 {
   font-weight: 400;
   text-shadow: 2px 2px black;
 }
-
-/* #card-content {
-  background-color: linear-gradient(#ff6f00,#fbd966)
-} */
 
 #card-action {
   background-color: #fbd966;

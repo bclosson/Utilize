@@ -79,11 +79,11 @@ class LibraryShow extends React.Component {
                 type="text" value={recipe.comments} >
               </textarea>
             </article>
-            <button className="btn" id="recipe-update" 
+            <button className="btn" id="recipe-edit-btn" 
               type="submit" name="action" onClick={this.editRecipe}>Edit Recipe
               <i class="material-icons right">send</i>
             </button>
-            <button className="btn" id="recipe-delete" 
+            <button className="btn" id="recipe-delete-btn" 
               type="submit" name="action" onClick={this.deleteRecipe}>Delete Recipe
               <i className="material-icons right">send</i>
             </button>

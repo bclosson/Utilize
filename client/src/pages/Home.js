@@ -15,12 +15,8 @@ class Home extends Component {
             <div className="col s6">
               <Link
                 to="/register"
-                style={{
-                  width: "140px",
-                  borderRadius: "3px",
-                  letterSpacing: "1.5px"
-                }}
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                id="register-button"
               >
                 Register
               </Link>
@@ -34,6 +30,7 @@ class Home extends Component {
                   letterSpacing: "1.5px"
                 }}
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                id="login-button"
               >
                 Log In
               </Link>

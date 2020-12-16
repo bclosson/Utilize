@@ -43,7 +43,10 @@ class NewRecipe extends React.Component {
                   />
                 </div>
               </div>
-              <Link className = 'btn button-blue spacing' to={{
+              <Link 
+                className = 'btn button-blue spacing'
+                id="new-rec-btn" 
+                to={{
                 pathname: '/recipes',
                 ingredients: {
                   q: this.state.ingredients
