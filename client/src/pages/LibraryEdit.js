@@ -81,45 +81,45 @@ class LibraryEdit extends React.Component {
     
   return (
     <div className="row">
-    <h3>Edit Recipe</h3>
+    <h3 id="edit-title">Edit Recipe</h3>
       <form onSubmit={this.updateRecipe} className="col s12">
         <div className="row">
           <div className="input-field col s6">
-            <label htmlFor="recipe-name">Recipe Name:</label><br />
-            <input value={recipe.name} id="edit-name" type="text" 
+            <label htmlFor="recipe-name" id="edit-titles">Recipe Name:</label><br />
+            <input value={recipe.name} id="edit-contents" type="text" 
             name="name" ref="name" onChange={this.handleInputChange} />
           </div>
           <div className="input-field col s6">
-            <label htmlFor="edit-image">Recipe Image URL: </label><br />
-            <input value={recipe.image} id="edit-image" type="text" 
+            <label htmlFor="edit-image" id="edit-titles">Recipe Image URL: </label><br />
+            <input value={recipe.image} id="edit-contents" type="text" 
               name="image" ref="image" onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
-            <label htmlFor="ingredients">Ingredients:</label><br />
-            <input value={recipe.ingredients} id="edit-ingredients" 
+            <label htmlFor="ingredients" id="edit-titles">Ingredients:</label><br />
+            <input value={recipe.ingredients} id="edit-contents" 
               type="text" name="ingredients" ref="ingredients" 
               onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
-            <label htmlFor="servings">Servings: </label><br />
-            <input value={recipe.servings} id="edit-servings" type="text" 
+            <label htmlFor="servings" id="edit-titles">Servings: </label><br />
+            <input value={recipe.servings} id="edit-contents" type="text" 
               name="servings" ref="servings" 
               onChange={this.handleInputChange} />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s12">
-            <label htmlFor="comments">Comments: </label><br />
-            <input value={recipe.comments} id="edit-comments" type="text" 
+            <label htmlFor="comments" id="edit-titles">Comments: </label><br />
+            <input value={recipe.comments} id="edit-contents" type="text" 
               name="comments" ref="comments" 
               onChange={this.handleInputChange} />
           </div>
         </div>
-        <button className="btn waves-effect waves-light" id="recipe-update" 
+        <button className="btn" id="recipe-update" 
           type="submit" name="action" onSubmit={this.updateRecipe}>Update Recipe
           <i class="material-icons right">send</i>
         </button>

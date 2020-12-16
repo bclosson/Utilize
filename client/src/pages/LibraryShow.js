@@ -75,17 +75,17 @@ class LibraryShow extends React.Component {
           <div className="card" id="text-box">
             <article className="comments">
               <h6>Comments:</h6>
-              <textarea name="comments" id="comments" cols="30" rows="10"
+              <textarea className="comments" id="comments" cols="30" rows="10"
                 type="text" value={recipe.comments} >
               </textarea>
             </article>
-            <button class="btn waves-effect waves-light" id="recipe-update" 
+            <button className="btn" id="recipe-update" 
               type="submit" name="action" onClick={this.editRecipe}>Edit Recipe
               <i class="material-icons right">send</i>
             </button>
-            <button class="btn waves-effect waves-light" id="recipe-delete" 
+            <button className="btn" id="recipe-delete" 
               type="submit" name="action" onClick={this.deleteRecipe}>Delete Recipe
-              <i class="material-icons right">send</i>
+              <i className="material-icons right">send</i>
             </button>
           </div>
         </div>

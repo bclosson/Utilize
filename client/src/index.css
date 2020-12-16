@@ -137,19 +137,6 @@ h1 {
   width: 35%;
 }
 
-
-/* #nutri-container {
-  box-shadow: 0 4px 8px 0 #ff6f00; 
-} */
-
-/* #ingredients-container {
-  background-color: #fcf1c6;
-  box-shadow: 0 4px 8px 0 #ff6f00;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0px 20px 0px 20px;
-} */
-
 #show-ingredients {
   background-color: #fcf1c6;
   box-shadow: 0 4px 8px 0 #ff6f00;
@@ -169,7 +156,6 @@ article.nutri-info {
 #ingredients {
   border-radius: 10px;
 }
-
 
 #lib-img {
   border-radius: 10px;
@@ -207,6 +193,28 @@ h6 {
 
 #recipe-delete {
   margin: 2px;
+}
+
+/* RECIPE EDIT */
+#edit-title {
+  color: #fbd966;
+  font-weight: 400;
+  text-shadow: 2px 2px black;
+  margin: 20px;
+}
+
+#edit-titles {
+  color: #ff6f00;
+  margin: 5px 0 5px 20px;
+  text-shadow: 1px 1px #283618;
+}
+
+#edit-contents {
+  margin: 5px 0 5px 20px;
+  text-shadow: 1px 1px #283618;
+}
+#recipe-update {
+  margin: 0 0 0 20px;
 }
 
 /* LIBRARY CARD */

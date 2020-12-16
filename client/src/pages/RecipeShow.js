@@ -57,13 +57,13 @@ const RecipeShow = (props) => {
             
               <h6>Nutritional Information (per serving):</h6>
               <h6>Servings: {show.servings}</h6>
-              <p>Calories Per Serving: {Math.floor(show.calories / show.servings)}</p>
-              <p>Carbohydrates: {Math.floor(show.carbs / show.servings)}g</p>
-              <p>Fat: {Math.floor(show.fat / show.servings)}g</p>
-              <p>Cholesterol: {Math.floor(show.cholesterol / show.servings)}mg</p>
-              <p>Fiber: {Math.floor(show.fiber / show.servings)}g</p>
-              <p>Protein: {Math.floor(show.protein / show.servings)}g</p>
-              <p>Sugars: {Math.floor(show.sugar / show.servings)}g</p>
+              <p id="nutri-p">Calories Per Serving: {Math.floor(show.calories / show.servings)}</p>
+              <p id="nutri-p">Carbohydrates: {Math.floor(show.carbs / show.servings)}g</p>
+              <p id="nutri-p">Fat: {Math.floor(show.fat / show.servings)}g</p>
+              <p id="nutri-p">Cholesterol: {Math.floor(show.cholesterol / show.servings)}mg</p>
+              <p id="nutri-p">Fiber: {Math.floor(show.fiber / show.servings)}g</p>
+              <p id="nutri-p">Protein: {Math.floor(show.protein / show.servings)}g</p>
+              <p id="nutri-p">Sugars: {Math.floor(show.sugar / show.servings)}g</p>
             
           </article>
         </div>
@@ -72,9 +72,9 @@ const RecipeShow = (props) => {
           <article className="comments">
             <h6>Comments:</h6>
           </article>
-          <button class="btn waves-effect waves-light" id="recipe-submit" 
+          <button className="btn" id="recipe-submit" 
             type="submit" name="action" onClick={onSubmit}>Save Recipe
-            <i class="material-icons right">send</i>
+            <i className="material-icons right">send</i>
           </button>
         </div>
       </div>
