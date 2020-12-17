@@ -2,7 +2,7 @@ const db = require('../models');
 // const url = ''
 
 // Load Recipe Model
-const Recipe = require('../models/Recipe')
+const Recipe = require('../models/Recipe');
 
 const index = (req, res) => {
   db.Recipe.find({})
