@@ -11,7 +11,7 @@ const path = require('path');
 
 const corsOptions = {
   // origin: 'http://localhost:3000'
-  origin: 'https://guarded-earth-36243.herokuapp.com/' 
+  origin: 'https://guarded-earth-36243.herokuapp.com' 
 }
 // PASSPORT MIDDLEWARE
 app.use(passport.initialize());
