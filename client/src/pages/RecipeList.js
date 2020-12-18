@@ -18,7 +18,7 @@ class RecipeList extends React.Component {
     let app_id = '2b29af96';
     let app_key = 'ad6c9bcb4fd957fb868715bd11fe277a';
     let ingredients = this.props.location.ingredients.q;
-    console.log('these are ingredients:', ingredients);
+    
     fetch(`https://api.edamam.com/search?app_id=${ app_id }&app_key=${ app_key }&q=${ ingredients }`)
       .then((buffer) => {
         if (buffer.ok) {

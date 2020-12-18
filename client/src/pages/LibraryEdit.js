@@ -53,7 +53,6 @@ class LibraryEdit extends React.Component {
         const recId = this.props.location.state;
         RecipeModel.update(recId, this.state)
           .then((data) => {
-            console.log('updatedRecipe:', data);
     
             this.props.history.push(`/recipes/library/${recId}`);
           })
