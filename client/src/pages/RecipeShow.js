@@ -30,10 +30,7 @@ const RecipeShow = (props) => {
         props.history.push('/recipes/library');
       })
   }
-
-  console.log('This is Show Props:', props)
-  // let id = props.recipes.recKey;
-  // console.log('this is show recKey:', id);
+  
   let show = props.location.recipes;
     return(
       <div className="profile-container">

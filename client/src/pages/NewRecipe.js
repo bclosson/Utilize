@@ -19,8 +19,6 @@ class NewRecipe extends React.Component {
     this.setState({
       [event.target.name] : event.target.value
     });
-    // console.log(this.state);
-    console.log("this is NewRecipe state:", this.state);
   };
 
   render() {

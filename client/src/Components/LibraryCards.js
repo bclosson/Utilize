@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const LibraryCards = (props) => {
-  console.log('LibraryCards Props:', props);
 
   return (
     <div className="row" id="card-row">

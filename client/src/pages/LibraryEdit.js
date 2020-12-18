@@ -65,19 +65,8 @@ class LibraryEdit extends React.Component {
     } else if (this.state.error) {
       return <h1>Error Getting Data</h1>
     } else {
-      
-    
 
-    let recipe = this.state;
-    // let ingredientList = JSON.stringify(recipe.ingredients);
-    // console.log('INGREDIENTS:', ingredientList);
-    
-    // let ingredientString = () => ingredientList.map((str) => {
-    //   return str;
-    // });
-    // console.log('STRING ING:', ingredientString);
-    console.log('this is editForm state:', this.state);
-    console.log('this is editForm props:', this.props);
+  let recipe = this.state;
     
   return (
     <div className="row">

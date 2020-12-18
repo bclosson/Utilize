@@ -17,7 +17,6 @@ class LibraryShow extends React.Component {
 
     RecipeModel.getOne(recId)
       .then((data) => {
-        console.log('this is LibraryShow data:', data);
 
         this.setState({ recipe: data.recipe, recId: this.props.match.params.id })
       })
