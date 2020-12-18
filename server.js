@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 4001;
+const PORT = process.env.PORT || 4001;
 const app = express();
 const passport = require('passport');
 const users = require('./routes/api/users');
@@ -41,4 +41,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // CONNECTION
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(port, () => console.log(`Server is running on port ${PORT}`));
