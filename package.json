@@ -1,6 +1,6 @@
 {
   "name": "utilize-back-end",
-  "homepage": "https://guarded-earth-36243.herokuapp.com/",
+  "homepage": "https://guarded-earth-36243.herokuapp.com",
   "version": "1.0.0",
   "description": "Utilize Back End",
   "main": "server.js",
