@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const db = require('../config/keys').mongoURI;
+// const db = require('../config/keys').MONGODB_URI;
+const db = process.env.MONGODB_URI || "mongodb:/localhost:27017/utilize";
 
 
 const configOptions = {

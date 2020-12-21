@@ -31,8 +31,8 @@
     "validator": "^13.5.1"
   },
   "engines": {
-    "node": "10.16.0",
-    "npm": "6.14.7"
+    "node": "12.18.4",
+    "npm": "6.14.9"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
