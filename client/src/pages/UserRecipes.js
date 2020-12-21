@@ -36,7 +36,7 @@ componentDidMount(){
 }
 
   render() {
-    console.log('this is library state:', this.state);
+    
     if (this.state.loading) {
       return <h1>Loading...</h1>
     } else if (this.state.error) {
