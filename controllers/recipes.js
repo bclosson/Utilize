@@ -1,11 +1,11 @@
-const db = require('../models');
+// const db = require('../models');
 
 
 // Load Recipe Model
 const Recipe = require('../models/Recipe');
 
 const index = (req, res) => {
-  db.Recipe.find({})
+  Recipe.find({})
   .then((foundRecipes) => {
     res.json({ recipes: foundRecipes });
   })
@@ -16,7 +16,7 @@ const index = (req, res) => {
 };
 
 const show = (req, res) => {
-  db.Recipe.findById(req.params.id)
+  Recipe.findById(req.params.id)
   .then((foundRecipe) => {
     res.json({ recipe: foundRecipe });
   })
@@ -28,7 +28,7 @@ const show = (req, res) => {
 
 const create = (req, res) => {
   console.log('this is Create:', req.body);
-  db.Recipe.create(req.body)
+  Recipe.create(req.body)
   .then((savedRecipe) => {
     res.json({ recipe: savedRecipe });
   })
@@ -39,7 +39,7 @@ const create = (req, res) => {
 };
 
 const update = (req, res) => {
-  db.Recipe.findByIdAndUpdate(req.params.id,
+  Recipe.findByIdAndUpdate(req.params.id,
     req.body, 
     { new: true })
     .then((updatedRecipe) => {
@@ -52,7 +52,7 @@ const update = (req, res) => {
 }
 
 const destroy = (req, res) => {
-  db.Recipe.findByIdAndDelete(req.params.id, (err, deletedRecipe) => {
+  Recipe.findByIdAndDelete(req.params.id, (err, deletedRecipe) => {
     if (err) return console.log('Error in recipes.destroy:', err);
 
     res.json({ recipe: deletedRecipe });
