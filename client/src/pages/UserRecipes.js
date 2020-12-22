@@ -14,7 +14,7 @@ class UserRecipes extends React.Component  {
   }
 // Call MongoDB to populate Saved Recipes
 componentDidMount(){
-  fetch("http://localhost:4001/api/v1/recipes", { mode: 'cors'})
+  fetch("/api/v1/recipes", { mode: 'cors'})
     .then((buffer) => {
       if (buffer.ok) {
         return buffer.json(buffer)
