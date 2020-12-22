@@ -1,4 +1,4 @@
-const url = `http://localhost:4001/api/v1/recipes`;
+const url = `/api/v1/recipes`;
 
 class RecipeModel {
   static all() {
