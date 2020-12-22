@@ -8,6 +8,7 @@ const RecipeShow = (props) => {
   // submit recipe to database
 
   const onSubmit = (event) => {
+    event.preventDefault();
     let show = props.location.recipes;
     let savedRecipe = {
       name: show.name,
@@ -26,6 +27,7 @@ const RecipeShow = (props) => {
 
     RecipeModel.create(savedRecipe)
       .then((data) => {
+        console.log(data);
         //redirect after new recipe is submitted to database
         props.history.push('/recipes/library');
       })
