@@ -1,6 +1,6 @@
 # UTILIZE!
 #### URL: 
-
+[Utilize!](https://serene-shore-87850.herokuapp.com/)
 ## OVERVIEW
 UTILIZE! is a app designed to help you come up with great meal ideas based on ingredients you currently have in your home.  Too many times we don't know how to use all the odds and ends in our kitchen to make a meal...often times that leads us to not use them at all and they go to waste.  UTILIZE! will solve that problem for you!  Just input your current ingredients and you will have great recipes at your fingertips! 
 
