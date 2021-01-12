@@ -1,7 +1,6 @@
 import React from 'react';
 import RecCards from '../Components/RecCards';
-import { Link } from 'react-router-dom';
-import RecipeShow from './RecipeShow';
+
 
 
 class RecipeList extends React.Component {

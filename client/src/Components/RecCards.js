@@ -1,7 +1,7 @@
 import React from 'react';
 import RecipeCard from './RecipeCard';
 import { v4 as uuidv4 } from 'uuid';
-import RecipeShow from '../pages/RecipeShow';
+
 
 const RecCards = (props) => {
   const recipeArray = props.recipeList.map((recipeObj) => {

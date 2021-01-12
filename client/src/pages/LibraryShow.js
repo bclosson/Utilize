@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import RecipeModel from '../models/recipe';
 
 
@@ -44,10 +43,10 @@ class LibraryShow extends React.Component {
       <div className="profile-container">
           <h3 id="show-name">{recipe.name}</h3>
           <div className="card" id="recipe">
-            <img src={recipe.image} id="rec-image" alt="Recipe Image"/>
+            <img src={recipe.image} id="rec-image" alt="Recipe"/>
           </div>
           <br/>
-           <a target="_blank" href={recipe.recipeLink}>website:{recipe.name}</a>
+           <a target="_blank" rel="noreferrer" href={recipe.recipeLink}>website:{recipe.name}</a>
           <aside>
             <div className="card" id="ingredients">
               <article className="card" id="show-ingredients">

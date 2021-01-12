@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import RecipeModel from '../models/recipe';
 
 
@@ -38,10 +37,10 @@ const RecipeShow = (props) => {
       <div className="profile-container">
         <h3 id="show-name">{show.name}</h3>
         <div className="card" id="recipe">
-          <img id="rec-image" src={show.image} alt="Recipe Image"/>
+          <img id="rec-image" src={show.image} alt="Recipe"/>
         </div>
         <br/>
-        <a target="_blank" href={show.url}>website: {show.name}</a>
+        <a target="_blank" rel="noreferrer" href={show.url}>website: {show.name}</a>
         <aside>
           <div className="card" id="ingredients">
             <article className="card" id="show-ingredients">
